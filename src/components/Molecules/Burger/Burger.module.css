@@ -1,0 +1,86 @@
+@media (max-width: 1400px) {
+  .burgerWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+  }
+  
+  .menuWrapper {
+    color: var(--gray);
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+    height: 40px;
+    justify-content: center;
+  }
+
+  .barsWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+  }
+
+  .burgerList {
+    animation: slideUpWithFade 1.3s;
+    font-size: 1.5rem;
+    list-style: none;
+    margin-right: 50px;
+    margin-top: 20px;
+    width: 250px;
+  }
+
+  .burgerList li {
+    background: var(--grad);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .burgerList li a {
+    color: var(--black);
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    background-color: var(--merlin);
+    height: 5px;
+    margin: 3px 20px;
+    transition: 1.4s;
+    width: 55px;
+  }
+
+  .change {
+    height: 30px;
+    padding-top: 5px;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-0, 0);
+    transform: rotate(-45deg) translate(-0, 0);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-10px, -10px);
+    transform: rotate(45deg) translate(-10px, -10px);
+  }
+
+  @keyframes slideUpWithFade {
+    0% {
+      opacity: 0.1;
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

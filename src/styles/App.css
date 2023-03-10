@@ -1,0 +1,112 @@
+:root {
+  --action-cart-border: 1px solid #e44c4c;
+  --anakiwaapprox: #97e8fe;
+  --burntSienna: #eb5757;
+  --black: #000000;
+  --card-shadow: 2px 10px 40px rgba(45, 65, 102, 0.1);
+  --cart-shadow: 0 25px 40px #1687d933;
+  --gray: #828282;
+  --mandy: #e44c4c;
+  --red: #ff0000;
+  --blue: #03c0ff;
+  --merlin: #3f3631;
+  --outerSpace: #2f3841;
+  --paleOyster: #9c8e76;
+  --wheat: #f5d5bc;
+  --white: #ffffff;
+  --grad: radial-gradient(
+      farthest-side at top right,
+      var(--wheat),
+      transparent 200px
+    ),
+    radial-gradient(
+      farthest-corner at top left,
+      var(--anakiwaapprox),
+      transparent 200px
+    ),
+    linear-gradient(transparent, var(--anakiwaapprox));
+  --red-grad: radial-gradient(
+      farthest-side at top right,
+      var(--red),
+      transparent 200px
+    ),
+    radial-gradient(
+      farthest-corner at top left,
+      var(--white),
+      transparent 200px
+    ),
+    linear-gradient(transparent, var(--white));
+
+  --blue-grad: radial-gradient(
+      farthest-side at bottom left,
+      var(--blue),
+      transparent 350px
+    ),
+    radial-gradient(
+      farthest-corner at top left,
+      var(--white),
+      transparent 200px
+    ),
+    linear-gradient(transparent, var(--white));
+}
+
+* {
+  min-width: fit-content;
+}
+
+.appContainer {
+  animation: slideUpWithFade 1.3s;
+  background: radial-gradient(
+      farthest-side at top right,
+      var(--wheat),
+      transparent 200px
+    ),
+    radial-gradient(
+      farthest-corner at top left,
+      var(--anakiwaapprox),
+      transparent 200px
+    ),
+    linear-gradient(transparent, var(--anakiwaapprox));
+  display: grid;
+  grid-template:
+    [row1-start] 'header' 100px [row1-end]
+    [row2-start] 'cart' 100px [row2-end]
+    [row3-start] 'hero' auto [row3-end]
+    [row4-start] 'content' auto [row4-end] / auto;
+  justify-content: center;
+  padding: 10px;
+}
+
+@media (max-width: 1400px) {
+  .appContainer {
+    grid-template:
+      [row1-start] 'header' auto [row1-end]
+      [row2-start] 'cart' auto [row2-end]
+      [row3-start] 'hero' auto [row3-end]
+      [row4-start] 'content' auto [row4-end] / auto;
+    zoom: 0.9;
+  }
+}
+
+@media (max-width: 390px) {
+  .appContainer {
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 330px) {
+  .appContainer {
+    zoom: 0.7;
+  }
+}
+
+@keyframes slideUpWithFade {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

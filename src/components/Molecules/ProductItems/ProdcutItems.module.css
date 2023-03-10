@@ -1,0 +1,66 @@
+.productsWithBlureEffect {
+  -webkit-filter: blur(5px);
+  animation: slideUpWithFade 0.5s;
+  display: grid;
+  filter: blur(5px);
+  gap: 5vw;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: auto;
+  padding: 100px 20px;
+  width: 80vw;
+}
+
+.productsWithoutBlureEffect {
+  animation: slideUpWithFade 0.5s;
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: auto;
+  padding: 100px 20px;
+  width: 80vw;
+}
+
+.emptyMessageWrapper {
+  align-self: center;
+  animation: slideUpWithFade 0.5s;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.loadingWrapper {
+  align-self: flex-start;
+  animation: slideUpWithFade 0.5s;
+  display: flex;
+  width: 100px;
+}
+
+.emptyMessage {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 15px;
+  text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .productsWithoutBlureEffect {
+    display: grid;
+  }
+  .emptyMessageWrapper {
+    width: 100vw;
+  }
+}
+
+@keyframes slideUpWithFade {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

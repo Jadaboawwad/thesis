@@ -1,0 +1,27 @@
+.productListWrapper {
+  animation: slideUpWithFade 1.3s;
+  display: flex;
+  flex-direction: row-reverse;
+  grid-area: products;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 15px;
+}
+
+@media (max-width: 1400px) {
+  .productListWrapper {
+    justify-content: center;
+    padding-bottom: 300px;
+  }
+}
+
+@keyframes slideUpWithFade {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

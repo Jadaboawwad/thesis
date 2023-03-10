@@ -1,0 +1,59 @@
+.contactUsWrapper {
+  animation: slideUpWithFade 1.3s;
+  background: radial-gradient(
+      farthest-side at top right,
+      var(--wheat),
+      transparent 200px
+    ),
+    radial-gradient(
+      farthest-corner at top left,
+      var(--anakiwaapprox),
+      transparent 200px
+    ),
+    linear-gradient(transparent, var(--anakiwaapprox));
+  display: grid;
+  grid-template:
+    [row1-start] 'header' 100px [row1-end]
+    [row2-start] 'cart' 100px [row2-end]
+    [row3-start] 'contactUs' auto [row3-end] / auto;
+  justify-content: center;
+  padding: 10px;
+}
+
+.contactUs {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 1400px) {
+  .contactUsWrapper {
+    grid-template:
+      [row1-start] 'header' auto [row1-end]
+      [row2-start] 'cart' auto [row2-end]
+      [row3-start] 'contactUs' auto [row3-end] / auto;
+    zoom: 0.9;
+  }
+}
+
+@media (max-width: 390px) {
+  .contactUsWrapper {
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 330px) {
+  .contactUsWrapper {
+    zoom: 0.7;
+  }
+}
+
+@keyframes slideUpWithFade {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

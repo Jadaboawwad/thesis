@@ -1,0 +1,28 @@
+.heroWrapper {
+  align-items: flex-end;
+  display: flex;
+  grid-area: hero;
+  justify-content: center;
+}
+
+.heroCard {
+  padding-bottom: 10px;
+  padding-top: 393px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1400px) {
+  .heroWrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroCard {
+    display: none;
+  }
+}

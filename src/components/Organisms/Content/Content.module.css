@@ -1,0 +1,47 @@
+.contentMessage {
+  align-self: center;
+  animation: slideUpWithFade 1.3s;
+  background: var(--grad);
+  color: var(--outerSpace);
+  font-family: GoogleSans-Regular;
+  font-size: 1.2rem;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  width: fit-content;
+}
+
+.content {
+  display: grid;
+  gap: 20vh 75px;
+  grid-area: content;
+  grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+  grid-template-rows: 32vh;
+  justify-items: center;
+  min-height: 20vh;
+  padding: 7vh 12% 30vh 12%;
+}
+
+@media (max-width: 1400px) {
+  .content {
+    display: grid;
+    gap: 10vh 20px;
+    grid-area: content;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+    min-height: 20vh;
+    padding: 5vh 10px;
+  }
+}
+
+@keyframes slideUpWithFade {
+  0% {
+    opacity: 0.1;
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

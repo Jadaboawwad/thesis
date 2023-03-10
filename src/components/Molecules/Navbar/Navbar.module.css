@@ -1,0 +1,24 @@
+.navbarWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10px;
+}
+
+.navbarList {
+  display: flex;
+  list-style: none;
+  width: 100%;
+}
+
+.navbarList li a {
+  color: var(--black);
+  font-family: GoogleSans-Regular;
+  font-size: 0.9rem;
+  padding: 1vw;
+  text-decoration: none;
+}
+
+.navbarList li a:hover {
+  cursor: pointer;
+}
